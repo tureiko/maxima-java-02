@@ -2,10 +2,9 @@ package org.example;
 
 public class App {
  public static void main(String[] args) {
+  Transport transport=new Transport();
+  System.out.println(transport.getPrice(100));
 
-Transport.getPrice(100);
-//  public void setCity(int city) {
- //     this.city = city; Transport.getPrice(100);}
  }
 
 }
