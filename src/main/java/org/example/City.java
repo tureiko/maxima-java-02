@@ -9,6 +9,10 @@ package org.example;
          this.distanceKm = distanceKm;
      }
 
+     public City() {
+
+     }
+
      public String getName() {
          return name;
      }

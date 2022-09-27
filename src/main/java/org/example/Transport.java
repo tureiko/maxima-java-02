@@ -1,8 +1,7 @@
 package org.example;
 
 public class Transport {
-    public Transport() {
-    }
+
 
     public String getName() {
         return name;
@@ -35,18 +34,17 @@ public class Transport {
     public void setCostOfKm(float costOfKm) {
         this.costOfKm = costOfKm;
     }
-
-    private String name="фургон";
-    private int capacity=500;
-    private int speed=90;
-    private float costOfKm=3.2f;
-
     public Transport(String name, int capacity, int speed, float costOfKm) {
         this.name = name;
         this.capacity = capacity;
         this.speed = speed;
         this.costOfKm = costOfKm;
     }
+    private String name;
+    private int capacity;
+    private int speed;
+    private float costOfKm;
+
 
     public  float getPrice(int city){
 
