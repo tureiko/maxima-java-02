@@ -46,9 +46,9 @@ public class Transport {
     private float costOfKm;
 
 
-    public  float getPrice(int city){
+    public  float getPrice(City city){
 
-        float stoimost= getCostOfKm()*city;
+        float stoimost= getCostOfKm()* city.getDistanceKm();
         //System.out.println(stoimost);
 
 
