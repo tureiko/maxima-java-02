@@ -27,7 +27,7 @@ public class Transport {
         this.speed = speed;
     }
 
-    public float getCostOfKm() {
+    public static float getCostOfKm() {
         return costOfKm;
     }
 
@@ -43,14 +43,12 @@ public class Transport {
     private String name;
     private int capacity;
     private int speed;
-    private float costOfKm;
+    private static float costOfKm;
 
 
     public  float getPrice(City city){
 
         float stoimost= getCostOfKm()* city.getDistanceKm();
-        //System.out.println(stoimost);
-
 
         return stoimost;
     }
