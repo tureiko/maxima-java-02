@@ -7,10 +7,9 @@ public class Plane extends Transport{
     public  float getPrice(City city){
 
         float stoimost= getCostOfKm()* city.getDistanceKm();
+        if (city.isOnWater())return stoimost;else return 0;
 
 
-
-        return stoimost;
     }
 
 }
