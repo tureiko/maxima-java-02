@@ -6,7 +6,7 @@ public class Plane extends Transport{
     }
     public float getPrice(City city){
         super.getPrice(city);
-        if (city.isHasAirport())return super.getPrice(city);else return 0;
+        if (city.hasAirport())return super.getPrice(city);else return 0;
 
 
     }
