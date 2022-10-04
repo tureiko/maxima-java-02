@@ -24,10 +24,11 @@ package org.example;
 
      private boolean isOnWater;
 
-     public City(String name, int distanceKm, boolean isOnWater) {
+     public City(String name, int distanceKm) {
          this.name = name;
          this.distanceKm = distanceKm;
-         this.isOnWater = isOnWater;
+         this.isOnWater=true;
+         this.hasAirport=false;
      }
 
      public City(String name, int distanceKm, boolean hasAirport , boolean isOnWater) {
