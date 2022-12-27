@@ -1,7 +1,11 @@
 package org.example;
 
-public class Transport {
+public abstract  class Transport {
 
+
+    public Transport() {
+
+    }
 
     public String getName() {
         return name;
@@ -27,7 +31,7 @@ public class Transport {
         this.speed = speed;
     }
 
-    public static float getCostOfKm() {
+    public float getCostOfKm() {
         return costOfKm;
     }
 
@@ -43,15 +47,22 @@ public class Transport {
     private String name;
     private int capacity;
     private int speed;
-    private static float costOfKm;
+    private float costOfKm;
 
-
-    public float getPrice(City city){
-
-        float stoimost= getCostOfKm()* city.getDistanceKm();
-
-        return stoimost;
+    @Override
+    public String toString() {
+        return "Transport{" +
+                "name='" + name + '\'' +
+                ", capacity=" + capacity +
+                ", speed=" + speed +
+                ", costOfKm=" + costOfKm +
+                '}';
     }
+
+   abstract public float getPrice(City city);
+
+
+
 
 }
 

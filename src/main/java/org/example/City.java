@@ -1,58 +1,55 @@
 package org.example;
 
- public class City {
-    private String name;
-     private int distanceKm;
-
+public class City {
+    private  String name;
+    private int distance;
     private boolean hasAirport;
+    private boolean isOnWater;
 
-     public boolean hasAirport() {
-         return hasAirport;
-     }
+    public City(String name, int distance, boolean hasAirport, boolean isOnWater) {
+        this.name = name;
+        this.distance = distance;
+        this.hasAirport = hasAirport;
+        this.isOnWater = isOnWater;
+    }
 
-     public void setHasAirport(boolean hasAirport) {
-         this.hasAirport = hasAirport;
-     }
+    public City(String name, int distance) {
+        this.name = name;
+        this.distance = distance;
+        this.isOnWater = true;
+        this.hasAirport = false;
+    }
 
-     public boolean isOnWater() {
-         return isOnWater;
-     }
 
-     public void setOnWater(boolean onWater) {
-         isOnWater = onWater;
-     }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-     private boolean isOnWater;
+    public int getDistance() {
+        return distance;
+    }
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
 
-     public City(String name, int distanceKm) {
-         this.name = name;
-         this.distanceKm = distanceKm;
-         this.isOnWater=true;
-         this.hasAirport=false;
-     }
+    public boolean isHasAirport() {
+        return hasAirport;
+    }
+    public void setHasAirport(boolean hasAirport) {
+        this.hasAirport = hasAirport;
+    }
 
-     public City(String name, int distanceKm, boolean hasAirport , boolean isOnWater) {
-         this.name = name;
-         this.distanceKm = distanceKm;
-         this.hasAirport=hasAirport;
-         this.isOnWater=isOnWater;
+    public boolean isOnWater() {
+        return isOnWater;
+    }
+    public void setOnWater(boolean onWater) {
+        isOnWater = onWater;
+    }
+}
 
-     }
 
-     public String getName() {
-         return name;
-     }
 
-     public void setName(String name) {
-         this.name = name;
-     }
-
-     public int getDistanceKm() {
-         return distanceKm;
-     }
-
-     public void setDistanceKm(int distanceKm) {
-         this.distanceKm = distanceKm;
-     }
- }
 

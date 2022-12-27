@@ -6,15 +6,21 @@ public class Ship extends Transport{
         super(name, capacity, speed, costOfKm);
     }
 
+    public Ship() {
+      // super();
+    }
+
     @Override
-    public float getPrice(City city) {
-         super.getPrice(city);
-         if (city.isOnWater())return super.getPrice(city);else return 0;
 
-
-
+        // public float getPrice() {
+   public float getPrice(City city){
+        float stoimost;
+        if (city.isOnWater()) {return stoimost= (float) (getCostOfKm()* city.getDistance());}
+        else{return 0;}
 
     }
+
+
 
 
 }
