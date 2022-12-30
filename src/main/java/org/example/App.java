@@ -3,7 +3,7 @@ package org.example;
 public class App {
  public static void main(String[] args) {
 
-  City piter=new City("piter",200,true,true);
+  City Spb=new City("piter",200,true,true);
   City Murmansk = new City("Мурманск",1400,false, true);
   City Tver = new City("Тверь", 540, false, true);
   City Mosсow = new City("Москва", 800, true, true);
@@ -20,7 +20,9 @@ public class App {
    System.out.println("Нет нужного транспорта");
   }
 
- // System.out.println(tanker.getPrice(piter));
+  TransportFactory factory = new TransportFactory();
+  Transport transport = factory.getTransport(Spb,190700,4);
+
 
 
 
