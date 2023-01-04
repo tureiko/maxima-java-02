@@ -20,8 +20,8 @@ public class App {
    System.out.println("Нет нужного транспорта");
   }
 
-  TransportFactory factory = new TransportFactory();
-  Transport transport = factory.getTransport(Spb,190700,4);
+  /*TransportFactory factory = new TransportFactory();
+  Transport transport = factory.getTransport(Spb,190700,4);*/
 
 
 

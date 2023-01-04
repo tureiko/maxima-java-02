@@ -1,6 +1,6 @@
 package org.example;
 
-public abstract  class Transport {
+public abstract  class Transport implements Repairable{
 
 
     public Transport() {
