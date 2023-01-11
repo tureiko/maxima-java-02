@@ -6,11 +6,13 @@ public class Plane extends Transport {
     }
 
     @Override
-   public float getPrice(City city) {
+    public float getPrice(City city) {
         float stoimost;
         if (city.isHasAirport()) {
-            return stoimost= (float) (getCostOfKm()* city.getDistance());}
-        else{return 0;}
+            return stoimost = (float) (getCostOfKm() * city.getDistance());
+        } else {
+            return 0;
+        }
     }
 
 
@@ -26,6 +28,6 @@ public class Plane extends Transport {
 
     @Override
     public boolean isRepairing() {
-        return true;
+        return false;
     }
 }

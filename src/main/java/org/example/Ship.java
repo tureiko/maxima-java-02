@@ -8,7 +8,11 @@ public class Ship extends Transport {
     @Override
     public float getPrice(City city) {
         float stoimost;
-        if (city.isOnWater()) {return stoimost= (float) (getCostOfKm()* city.getDistance());} else{return 0;}
+        if (city.isOnWater()) {
+            return stoimost = (float) (getCostOfKm() * city.getDistance());
+        } else {
+            return 0;
+        }
     }
 
 
@@ -25,7 +29,7 @@ public class Ship extends Transport {
     @Override
     public boolean isRepairing() {
 
-        return true;
+        return false;
     }
 }
 
