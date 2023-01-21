@@ -1,11 +1,29 @@
 package org.example;
 
-public abstract  class Transport implements Repairable{
+abstract class Transport implements Repairable{
 
+    private  String name;
+    private int capacity;
+    private int speed;
+    private double costOfKm;
+    private boolean isRepairing;
 
-    public Transport() {
-
+    public Transport(String name, int capacity, int speed, double costOfKm, boolean isRepairing) {
+        this.name = name;
+        this.capacity = capacity;
+        this.speed = speed;
+        this.costOfKm = costOfKm;
+        this.isRepairing = isRepairing;
     }
+
+    public Transport(String name, int capacity, int speed, double costOfKm) {
+        this.name = name;
+        this.capacity = capacity;
+        this.speed = speed;
+        this.costOfKm = costOfKm;
+    }
+
+    abstract float getPrice(City city);
 
     public String getName() {
         return name;
@@ -31,41 +49,21 @@ public abstract  class Transport implements Repairable{
         this.speed = speed;
     }
 
-    public float getCostOfKm() {
+    public double getCostOfKm() {
         return costOfKm;
     }
 
-    public void setCostOfKm(float costOfKm) {
+    public void setCostOfKm(double costOfKm) {
         this.costOfKm = costOfKm;
     }
-    public Transport(String name, int capacity, int speed, float costOfKm) {
-        this.name = name;
-        this.capacity = capacity;
-        this.speed = speed;
-        this.costOfKm = costOfKm;
-    }
-    private String name;
-    private int capacity;
-    private int speed;
-    private float costOfKm;
+
 
     @Override
-    public String toString() {
-        return "Transport{" +
-                "name='" + name + '\'' +
-                ", capacity=" + capacity +
-                ", speed=" + speed +
-                ", costOfKm=" + costOfKm +
-                '}';
+    public boolean isRepairing() {
+        return isRepairing;
     }
 
-   abstract public float getPrice(City city);
-
-
-
-
+    public void setRepairing(boolean repairing) {
+        isRepairing = repairing;
+    }
 }
-
-
-
-

@@ -2,15 +2,18 @@ package org.example;
 
 public class Plane extends Transport {
     public Plane(String name, int capacity, int speed, double costOfKm) {
-        super(name, capacity, speed, (float) costOfKm);
+        super(name, capacity, speed, costOfKm);
+    }
+
+    public Plane(String name, int capacity, int speed, double costOfKm, boolean isRepairing) {
+        super(name, capacity, speed, costOfKm, isRepairing);
     }
 
     @Override
-   public float getPrice(City city) {
+    float getPrice(City city) {
         float stoimost;
-        if (city.isHasAirport()) {
-            return stoimost= (float) (getCostOfKm()* city.getDistance());}
-        else{return 0;}
+        if (city.isHasAirport()) return (float) (getCostOfKm() * city.getDistance());
+        else return 0;
     }
 
 
@@ -26,6 +29,6 @@ public class Plane extends Transport {
 
     @Override
     public boolean isRepairing() {
-        return true;
+        return false;
     }
 }

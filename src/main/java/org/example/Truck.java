@@ -1,25 +1,30 @@
 package org.example;
 
-public class Truck extends Transport{
+public class Truck extends Transport {
+
     public Truck(String name, int capacity, int speed, double costOfKm) {
-        super(name, capacity, speed, (float) costOfKm);
+        super(name, capacity, speed, costOfKm);
+    }
+
+    public Truck(String name, int capacity, int speed, double costOfKm, boolean isRepairing) {
+        super(name, capacity, speed, costOfKm, isRepairing);
     }
 
     @Override
-    public float getPrice(City city) {
-        float stoimost= (float) (getCostOfKm()* city.getDistance());
+    float getPrice(City city) {
+        float stoimost = (float) (getCostOfKm() * city.getDistance());
         return stoimost;
     }
 
 
     @Override
     public void startRepair() {
-        System.out.println("Грузовик не ремонте");
+        if (isRepairing()) System.out.println("Грузовик на ремонте");
     }
 
     @Override
     public void finishRepair() {
-        System.out.println("Грузовик доступен");
+        if (!isRepairing()) System.out.println("Грузовик доступен");
     }
 
     @Override
