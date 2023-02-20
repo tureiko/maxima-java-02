@@ -11,7 +11,6 @@ public class Plane extends Transport {
 
     @Override
     float getPrice(City city) {
-        float stoimost;
         if (city.isHasAirport()) return (float) (getCostOfKm() * city.getDistance());
         else return 0;
     }

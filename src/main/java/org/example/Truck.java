@@ -29,6 +29,6 @@ public class Truck extends Transport {
 
     @Override
     public boolean isRepairing() {
-        return true;
+        return false;
     }
 }
