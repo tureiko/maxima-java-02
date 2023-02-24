@@ -25,12 +25,12 @@ public class TransportFactory {
 
     }
 
-    private int roundSpeed(int speed) {  // метод для округления скорости
+    public int roundSpeed(int speed) {  // метод для округления скорости
         if (speed % 10 == 0) return speed;
         return (int) (Math.ceil(speed / 10.0) * 10);
     }
 
-    private static int roundWeight(int weight) {  // метод для округления грузоподъемности
+    public static int roundWeight(int weight) {  // метод для округления грузоподъемности
         if (weight % 500 == 0) {
             return weight;
         }
